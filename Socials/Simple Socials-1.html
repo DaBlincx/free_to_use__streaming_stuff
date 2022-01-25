@@ -1,0 +1,98 @@
+<html>
+
+<head>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'>
+    <link rel='stylesheet' href='https://www.streamshift.site/stylesheets/overlay0.css' />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css'>
+</head>
+
+<div class="main-content">
+    <div id="socials-row" class="font1" >
+        <div class="column">
+            <div id="socials-1" class="colored-div">
+                <div id="discord-account" class='smaller'>
+                    <i class="socials-icon fab fa-1x fa-discord"></i>
+                    kommt bald
+                </div>
+            </div>
+        </div>
+        <div id="socials-2" class="column"  style="display:none;">
+            <div class="colored-div">
+                <div id="" class='smaller'>
+                    <i class="socials-icon fab fa-1x "></i>
+                    
+                </div>
+            </div>
+        </div>
+        <div id="socials-3" class="column"  style="display:none;">
+            <div class="colored-div">
+                <div id="" class='smaller'>
+                    <i class="socials-icon fab fa-1x "></i>
+                    
+                </div>
+            </div>
+        </div>
+        <div id="socials-4" class="column"  style="display:none;">
+            <div class="colored-div">
+                <div id="" class='smaller'>
+                    <i class="socials-icon fab fa-1x "></i>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="announcement font1"> </div>
+
+    </div>
+</div>
+
+
+
+<script>
+    bgClasses = ['colored-div', 'colored-border'];
+    for (var i = 0; i < bgClasses.length; i++) {
+        elements = document.getElementsByClassName(bgClasses[i]);
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].style.backgroundColor = "rgb(0, 204, 250)";
+        }
+    }
+    elements = document.getElementsByClassName('colored-div-text');
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].style.color = "rgb(0, 204, 250)";
+    }
+    colClasses = ['smaller'];
+    for (var i = 0; i < colClasses.length; i++) {
+        elements = document.getElementsByClassName(colClasses[i]);
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].style.color = "rgb(255, 255, 255)";
+        }
+    }
+
+    borders = document.getElementsByClassName('colored-border');
+    for (var i = 0; i < borders.length; i++) {
+        borders[i].style.color = "rgb(0, 204, 250)";
+    }
+
+    colored_div = function () {
+        var divs = document.getElementsByClassName("colored-div");
+        for(var i = 0; i < divs.length; i++) {
+            var relFontsize = divs[i].offsetWidth*0.05;
+            divs[i].style.fontSize = relFontsize+'px';
+        }
+
+        var divs = document.getElementsByClassName("announcement");
+        for(var i = 0; i < divs.length; i++) {
+            var relFontsize = divs[i].offsetWidth*0.05;
+            divs[i].style.fontSize = relFontsize/2+'px';
+        }
+    };
+
+    window.onload = function(event) {
+        colored_div();
+    };
+    window.onresize = function(event) {
+        colored_div();
+    };
+</script>
+
+</html>
